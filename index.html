@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -43,22 +44,24 @@
     function check(){
       const date = new Date();
 
-      const yearNow = date.getFullYear;
-      const monthNow = date.getMonth;
-      const dayNow = date.getDay;
+      const yearNow = date.getFullYear();
+      const monthNow = date.getMonth();
+      const dayNow = date.getDay();
       
-      var yearBirth = window.document.getElementById('year');
-      var monthBirth = window.document.getElementById('month');
-      var dayBirth = window.document.getElementById('day');
+      var yearBirth = window.document.getElementById('year').value;
+      var monthBirth = window.document.getElementById('month').value;
+      var dayBirth = window.document.getElementById('day').value;
 
-      const haveWrongAge = yearBirth.value > yearNow;
-      const haveNoValue = (yearBirth || monthBirth || dayBirth).value.length == 0;
+      var haveWrongAge = yearBirth > yearNow;
+      var haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
       
 
       if(haveWrongAge || haveNoValue) {
-        window.alert('Please, check the data and try again!')
+        window.alert('Please, check the data and try again!');
       } else {
-        window.alert('yes')
+        const old = yearNow - Number(yearBirth);
+        window.alert(old);
+        console.log(old);
       }
     }
 
