@@ -59,9 +59,25 @@
       if(haveNoValue || haveInvalidDate || haveWrongAge) {
         window.alert('Please, check the data and try again!');
       } else {
-        const yearAge = yearNow - Number(yearBirth);
-        const monthAge = (monthNow + 1) - Number(monthBirth);
-        const dayAge = dayNow - Number(dayBirth);
+
+        var yearAge = yearNow - Number(yearBirth);
+        var monthAge = (monthNow + 1) - Number(monthBirth);
+        var dayAge = dayNow - Number(dayBirth);
+
+        if(monthBirth > monthNow ){
+          yearAge - 1;
+          monthAge = Number(monthBirth) - (monthNow + 1);
+
+
+
+          
+
+
+
+        }
+        
+        
+
         
         console.log(yearAge);
         console.log(monthAge);
