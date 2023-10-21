@@ -41,30 +41,25 @@
 
   <script>
     function check(){
-      alert("Hello word");
-
       const date = new Date();
 
       const yearNow = date.getFullYear;
       const monthNow = date.getMonth;
       const dayNow = date.getDay;
+      
+      var yearBirth = window.document.getElementById('year');
+      var monthBirth = window.document.getElementById('month');
+      var dayBirth = window.document.getElementById('day');
 
-      console.log(date);
+      const haveWrongAge = yearBirth.value > yearNow;
+      const haveNoValue = (yearBirth || monthBirth || dayBirth).value.length == 0;
       
 
-      var yearBirth = window.document.getElementById('year').value;
-      var monthBirth = window.document.getElementById('month').value;
-      var dayBirth = window.document.getElementById('day').value;
-
-      console.log(yearBirth);
-      console.log(monthBirth);
-      console.log(dayBirth);
-
-
-      
-
-
-
+      if(haveWrongAge || haveNoValue) {
+        window.alert('Please, check the data and try again!')
+      } else {
+        window.alert('yes')
+      }
     }
 
   </script>
