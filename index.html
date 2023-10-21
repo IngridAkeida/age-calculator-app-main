@@ -52,11 +52,13 @@
       var monthBirth = window.document.getElementById('month').value;
       var dayBirth = window.document.getElementById('day').value;
 
-      var haveWrongAge = yearBirth > yearNow;
       var haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
+      var haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
+      var haveWrongAge = yearBirth > yearNow;
+      
       
 
-      if(haveWrongAge || haveNoValue) {
+      if(haveNoValue || haveInvalidDate || haveWrongAge) {
         window.alert('Please, check the data and try again!');
       } else {
         const old = yearNow - Number(yearBirth);
