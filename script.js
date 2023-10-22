@@ -1,3 +1,4 @@
+
 function check(){
   const date = new Date();
 
@@ -7,35 +8,50 @@ function check(){
   
   //catch fill elements
 
-  var yearBirth = Number(window.document.getElementById('year').value);
-  var monthBirth = Number(window.document.getElementById('month').value);
-  var dayBirth = Number(window.document.getElementById('day').value);
+  let yearBirth = Number(window.document.getElementById('year').value);
+  let monthBirth = Number(window.document.getElementById('month').value);
+  let dayBirth = Number(window.document.getElementById('day').value);
 
   // Result
 
-  var yearsRes = window.document.getElementById('res-years');
-  var monthsRes = window.document.getElementById('res-months');
-  var daysRes = window.document.getElementById('res-days');
+  let yearsRes = window.document.getElementById('res-years');
+  let monthsRes = window.document.getElementById('res-months');
+  let daysRes = window.document.getElementById('res-days');
   
   //errors
 
-  var haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
-  var haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
-  var haveWrongYear = yearBirth > yearNow;
-  var haveInvalidMonth = monthBirth > 12;
+  let haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
+  let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
+  let haveWrongYear = yearBirth > yearNow;
+  let haveInvalidMonth = monthBirth > 12;
 
+  //discovery how many days the month have
+
+  function getDaysInMonth(month,year){
+    return new Date(year, month, 0).getDate();
+  }
+  console.log(getDaysInMonth(monthBirth, yearBirth));
+
+  //logica 
+
+  if(dayBirth > getDaysInMonth(month,year)) {
+
+    window.alert('teste error');
   
-  if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth) {
+  } else if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth) {
+  
     //must be a valid day
     //must be a valid month
     //must be a valid year
+    
     window.alert('Please, check the data and try again!');
-  }  else {
+  
+  } else {
 
-    var yearAge = yearNow - yearBirth;
+    let yearAge = yearNow - yearBirth;
     
     if(monthBirth < monthNow ){
-      var monthAge = monthNow - monthBirth;
+      monthAge = monthNow - monthBirth;
 
     } else if(monthBirth > monthNow ){
       yearAge -= 1;
@@ -43,15 +59,12 @@ function check(){
     }
 
     if(dayBirth < dayNow ){
-      var dayAge = dayNow - dayBirth;
+      dayAge = dayNow - dayBirth;
 
     } else if(dayBirth > dayNow ){
       monthAge -= 1;
       dayAge = dayNow - dayBirth % 31;
     }
-
-    alert('Hey, You have ' +yearAge+ 'years,'+monthAge+ ' months, and ' +dayAge+ ' days. ');
-
     yearsRes.innerHTML = `${yearAge} years`;
     monthsRes.innerHTML = `${monthAge} months`;
     daysRes.innerHTML = `${dayAge} days`;
