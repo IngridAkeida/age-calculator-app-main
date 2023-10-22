@@ -50,9 +50,9 @@
       
       //catch fill elements
 
-      var yearBirth = window.document.getElementById('year').value;
-      var monthBirth = window.document.getElementById('month').value;
-      var dayBirth = window.document.getElementById('day').value;
+      var yearBirth = Number(window.document.getElementById('year').value);
+      var monthBirth = Number(window.document.getElementById('month').value);
+      var dayBirth = Number(window.document.getElementById('day').value);
       
       //errors
 
@@ -64,25 +64,25 @@
         window.alert('Please, check the data and try again!');
       } else {
 
-        var yearAge = yearNow - Number(yearBirth);
-        //var years = Math.floor(numberOfDays / 365);
+        var yearAge = yearNow - yearBirth;
         
-        
-        var monthAge = (monthNow + 1) - Number(monthBirth);
-        //var months = Math.floor(numberOfDays % 365 / 30);
-        console.log(monthAge);
-    
-        var dayAge = dayNow - Number(dayBirth);
-        // soma anteriores
-        console.log(dayAge);
+        if(monthBirth < monthNow ){
+          var monthAge = (monthNow + 1) - monthBirth;
 
-        if(monthBirth > monthNow ){
-          yearAge - 1;
-          monthAge = Number(monthBirth) - (monthNow + 1);
-
+        } else if(monthBirth > monthNow ){
+          yearAge -= 1;
+          monthAge = (monthNow + 1) - monthBirth % 12;
         }
 
-        alert('Hey, You have ' +yearAge+ ' years,'+monthAge+ ' months, and ' +dayAge+ ' days. ')
+        if(dayBirth < dayNow ){
+          var dayAge = dayNow - dayBirth;
+
+        } else if(dayBirth > dayNow ){
+          monthAge -= 1;
+          dayAge = dayNow - dayBirth % 31;
+        }
+
+        alert('Hey, You have ' +yearAge+ 'years,'+monthAge+ ' months, and ' +dayAge+ ' days. ')
       }
     }
 
