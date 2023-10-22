@@ -50,6 +50,5 @@ function check(){
     yearsRes.innerHTML = `${yearAge} years`;
     monthsRes.innerHTML = `${monthAge} months`;
     daysRes.innerHTML = `${dayAge} days`;
-
   }
 }
