@@ -21,11 +21,16 @@ function check(){
 
   var haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
   var haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
-  var haveWrongAge = yearBirth > yearNow;
+  var haveWrongYear = yearBirth > yearNow;
+  var haveInvalidMonth = monthBirth > 12;
+  var haveInvalidDay = dayBirth > 31;
   
-  if(haveNoValue || haveInvalidDate || haveWrongAge) {
+  if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth || haveInvalidDay) {
+    //must be a valid day
+    //must be a valid month
+    //must be a valid year
     window.alert('Please, check the data and try again!');
-  } else {
+  }  else {
 
     var yearAge = yearNow - yearBirth;
     
