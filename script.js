@@ -2,7 +2,7 @@ function check(){
   const date = new Date();
 
   const yearNow = date.getFullYear();
-  const monthNow = date.getMonth();
+  const monthNow = date.getMonth() + 1;
   const dayNow = date.getDate();
   
   //catch fill elements
@@ -23,9 +23,9 @@ function check(){
   var haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
   var haveWrongYear = yearBirth > yearNow;
   var haveInvalidMonth = monthBirth > 12;
-  var haveInvalidDay = dayBirth > 31;
+
   
-  if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth || haveInvalidDay) {
+  if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth) {
     //must be a valid day
     //must be a valid month
     //must be a valid year
@@ -35,11 +35,11 @@ function check(){
     var yearAge = yearNow - yearBirth;
     
     if(monthBirth < monthNow ){
-      var monthAge = (monthNow + 1) - monthBirth;
+      var monthAge = monthNow - monthBirth;
 
     } else if(monthBirth > monthNow ){
       yearAge -= 1;
-      monthAge = (monthNow + 1) - monthBirth % 12;
+      monthAge = monthNow - monthBirth % 12;
     }
 
     if(dayBirth < dayNow ){
