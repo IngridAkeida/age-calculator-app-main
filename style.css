@@ -77,7 +77,12 @@ body{
   border: solid 1px var(--Light-grey);
   border-radius: 0.5rem;
 }
-.info{
+
+button
+
+
+
+.info ul{
   display: flex;
   text-align: left;
 }
