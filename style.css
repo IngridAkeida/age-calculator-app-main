@@ -12,10 +12,29 @@ ul,li{
 }
 
 :root{
+  /*Primary*/
+  /*Neutral*/
   --White: #ffffff;
   --LightGray: #d6e2f0;
   --GrayishBlue: #7b879d;
   --DarkBlue: #1f3251;
+}
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+body{
+  font-family: ;
 }
 
 .container{
@@ -51,7 +70,6 @@ ul,li{
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
-  
 }
 
 .form-fill input{
@@ -61,7 +79,11 @@ ul,li{
   border-radius: 0.5rem;
 }
 
-.text h1{
+.result{
+
+}
+
+/*.text h1{
   font-weight: 700;
   font-size: 1rem;
   color: var(--DarkBlue);
@@ -72,7 +94,7 @@ ul,li{
   font-weight: 400;
   font-size: 0.8rem;
   color: var(--GrayishBlue);
-}
+}*/
 
 .attribution { 
   font-size: 11px; 
