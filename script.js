@@ -10,6 +10,12 @@ function check(){
   var yearBirth = Number(window.document.getElementById('year').value);
   var monthBirth = Number(window.document.getElementById('month').value);
   var dayBirth = Number(window.document.getElementById('day').value);
+
+  // Result
+
+  var yearsRes = window.document.getElementById('res-years');
+  var monthsRes = window.document.getElementById('res-months');
+  var daysRes = window.document.getElementById('res-days');
   
   //errors
 
@@ -39,6 +45,11 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    alert('Hey, You have ' +yearAge+ 'years,'+monthAge+ ' months, and ' +dayAge+ ' days. ')
+    alert('Hey, You have ' +yearAge+ 'years,'+monthAge+ ' months, and ' +dayAge+ ' days. ');
+
+    yearsRes.innerHTML = `${yearAge} years`;
+    monthsRes.innerHTML = `${monthAge} months`;
+    daysRes.innerHTML = `${dayAge} days`;
+
   }
 }
