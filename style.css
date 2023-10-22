@@ -34,7 +34,7 @@ ul,li{
   align-items: center;
   text-align: center;
   justify-content: center;
-  width: 16rem;
+  width: 18rem;
   height: 20rem;
   background-color: var(--White);
   padding: 1rem;
@@ -50,9 +50,16 @@ ul,li{
 .form-fill{
   display: flex;
   flex-direction: column;
+  margin: 0.5rem;
+  
 }
 
-
+.form-fill input{
+  width: 5rem;
+  padding: 1rem;
+  border: solid 1px red;
+  border-radius: 0.5rem;
+}
 
 .text h1{
   font-weight: 700;
