@@ -45,10 +45,10 @@ body{
   text-align: center;
   justify-content: center;
   width: 18rem;
-  height: 20rem;
+  height: 24rem;
   background-color: var(--White);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 5rem 1rem;
   box-shadow: 0.5rem 0.5rem 1rem var(--GrayishBlue);
   gap: 1rem;
 }
@@ -77,24 +77,15 @@ body{
   border: solid 1px var(--Light-grey);
   border-radius: 0.5rem;
 }
+.info{
+  display: flex;
+  text-align: left;
+}
 
 .result{
-  color:red;
-
+  color:var(--Off-black);
+  font-size: 2.5rem;
 }
-
-/*.text h1{
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--DarkBlue);
-  margin-bottom: 1rem;
-}
-
-.text p{
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: var(--GrayishBlue);
-}*/
 
 .attribution { 
   font-size: 11px; 
