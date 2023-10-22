@@ -48,9 +48,13 @@
       const monthNow = date.getMonth();
       const dayNow = date.getDate();
       
+      //catch fill elements
+
       var yearBirth = window.document.getElementById('year').value;
       var monthBirth = window.document.getElementById('month').value;
       var dayBirth = window.document.getElementById('day').value;
+      
+      //errors
 
       var haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
       var haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
@@ -61,27 +65,24 @@
       } else {
 
         var yearAge = yearNow - Number(yearBirth);
+        //var years = Math.floor(numberOfDays / 365);
+        
+        
         var monthAge = (monthNow + 1) - Number(monthBirth);
+        //var months = Math.floor(numberOfDays % 365 / 30);
+        console.log(monthAge);
+    
         var dayAge = dayNow - Number(dayBirth);
+        // soma anteriores
+        console.log(dayAge);
 
         if(monthBirth > monthNow ){
           yearAge - 1;
           monthAge = Number(monthBirth) - (monthNow + 1);
 
-
-
-          
-
-
-
         }
-        
-        
 
-        
-        console.log(yearAge);
-        console.log(monthAge);
-        console.log(dayAge);
+        alert('Hey, You have ' +yearAge+ ' years,'+monthAge+ ' months, and ' +dayAge+ ' days. ')
       }
     }
 
