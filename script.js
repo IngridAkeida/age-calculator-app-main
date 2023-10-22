@@ -24,7 +24,8 @@ function check(){
   let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
   let haveWrongYear = yearBirth > yearNow;
   let haveInvalidMonth = monthBirth > 12;
-
+  
+  /* This part doesn't work for now
   //discovery how many days the month have
 
   function getDaysInMonth(month,year){
@@ -38,7 +39,9 @@ function check(){
 
     window.alert('teste error');
   
-  } else if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth) {
+  } else */
+  
+  if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth) {
   
     //must be a valid day
     //must be a valid month

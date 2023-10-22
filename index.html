@@ -10,36 +10,43 @@
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <label for="day">Day</label>
-    <input type="number" id="day" name="day">
+  <div class="container">
+    <div class="card">
+      
+      <main class="form">
+        <div>
+          <label for="day">Day</label>
+          <input type="number" id="day" name="day">
+        </div>
 
-    <label for="month">Month</label>
-    <input type="number" id="month" name="month">
+        <div>
+          <label for="month">Month</label>
+          <input type="number" id="month" name="month">
+        </div>
+        <div>
+          <label for="year">Year</label>
+          <input type="number" id="year" name="year">
+        </div>
+        <button type="submit" onclick="check()">element</button>
+      </main>
 
-    <label for="year">Year</label>
-    <input type="number" id="year" name="year">
-
-    <button type="submit" onclick="check()">element</button>
-  </main>
-
-  <div>
-    <ul>
-      <li id="res-years">fill years</li>
-      <li id="res-months">fill months</li>
-      <li id="res-days">fill days</li>
-    </ul>
-  </div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/IngridAkeida">Ingrid Sanches</a>.
+      <div>
+        <ul>
+          <li id="res-years">--- years</li>
+          <li id="res-months">--- months</li>
+          <li id="res-days">--- days</li>
+        </ul>
+      </div>
+      
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/IngridAkeida">Ingrid Sanches</a>.
+      </div>
+      
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
