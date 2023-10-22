@@ -47,6 +47,13 @@ ul,li{
   display: flex;
 }
 
+.form-fill{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 .text h1{
   font-weight: 700;
   font-size: 1rem;
