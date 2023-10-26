@@ -81,7 +81,7 @@ body{
 }
 
 .form-fill input:hover{
-  color: var(--Purple);
+  border: solid 1px var(--Purple);
 }
 
 .dates-send{
