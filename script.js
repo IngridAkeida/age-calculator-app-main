@@ -25,20 +25,20 @@ function check(){
   let haveWrongYear = yearBirth > yearNow;
   let haveInvalidMonth = monthBirth > 12;
   
-  
-
   function getDaysInMonth(month,year){
     return new Date(year, month, 0).getDate();
   }
   console.log(getDaysInMonth(monthBirth, yearBirth));
 
-  //logica 
-
+  //logic
   if(dayBirth > getDaysInMonth(monthBirth, yearBirth)) {
 
     window.alert('teste error');
   
-  } else if(haveNoValue || haveInvalidDate || haveWrongYear || haveInvalidMonth) {
+  } else if(haveNoValue
+     || haveInvalidDate 
+     || haveWrongYear 
+     || haveInvalidMonth) {
   
     //must be a valid day
     //must be a valid month
