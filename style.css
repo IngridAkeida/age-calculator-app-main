@@ -80,11 +80,52 @@ body{
 
 button{
   background-color: var(--Purple);
+  position: relative;
   border: none;
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-radius: 3rem;
 }
 
+.line-middle{
+  width: 2.5px;
+  height: 26px;
+  top: 18px;
+  background-color: var(--Light-grey);
+  display: inline-block;
+  position: absolute;
+  
+}
+
+.line-right{
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  width: 14px; 
+  height: 14px;  
+  border: solid 2.5px var(--Light-grey);
+  border-radius: 16px 0px 18px 0px;
+  border-color: var(--Light-grey) transparent transparent var(--Light-grey) ;
+ 
+}
+
+.line-left{
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 14px; 
+  height: 14px;  
+  border: solid 2.5px var(--Light-grey);
+  border-radius: 0px 16px 0px 18px;
+  border-color:  var(--Light-grey) var(--Light-grey) transparent transparent;
+}
+
+hr{
+  position: relative;
+  background-color: var(--Light-red);
+  border-top: 2px solid var(--Smokey-grey);
+}
 
 
 .info ul{
