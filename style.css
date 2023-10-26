@@ -141,17 +141,24 @@ button{
   border-color:  var(--White) var(--White) transparent transparent;
 }
 
+.info{
+  margin-left: -3rem;
+}
+
 .info ul{
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin-top: 24px;
 }
 
 .result{
   color:var(--Off-black);
   font-weight: bold;
   font-style: italic;
+  letter-spacing: -0.1rem;
   font-size: 3rem;
+  margin-top: -20px;
 }
 
 .attribution { 
