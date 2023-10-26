@@ -53,7 +53,7 @@ body{
   gap: 1rem;
 }
 
-.form{
+.dates-form{
   display: flex;
 }
 
@@ -78,12 +78,29 @@ body{
   border-radius: 0.5rem;
 }
 
+.dates-send{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.line{
+  width: auto;
+  border-top: 1px solid var(--Smokey-grey);
+  margin-top: -2rem;
+  width: 16rem;
+  z-index: 1;
+}
+
 button{
   background-color: var(--Purple);
   position: relative;
   border: none;
   padding: 2rem;
   border-radius: 3rem;
+  z-index: 2;
 }
 
 .line-middle{
@@ -120,13 +137,6 @@ button{
   border-radius: 0px 16px 0px 18px;
   border-color:  var(--White) var(--White) transparent transparent;
 }
-
-hr{
-  position: relative;
-  background-color: var(--Light-red);
-  border-top: 2px solid var(--Smokey-grey);
-}
-
 
 .info ul{
   display: flex;
