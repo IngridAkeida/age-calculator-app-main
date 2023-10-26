@@ -88,9 +88,9 @@ button{
 
 .line-middle{
   width: 2.5px;
-  height: 26px;
-  top: 18px;
-  background-color: var(--Light-grey);
+  height: 18px;
+  top: 20px;
+  background-color: var(--White);
   display: inline-block;
   position: absolute;
   
@@ -103,9 +103,9 @@ button{
   bottom: 20px;
   width: 14px; 
   height: 14px;  
-  border: solid 2.5px var(--Light-grey);
+  border: solid 2.5px var(--White);
   border-radius: 16px 0px 18px 0px;
-  border-color: var(--Light-grey) transparent transparent var(--Light-grey) ;
+  border-color: var(--White) transparent transparent var(--White) ;
  
 }
 
@@ -116,9 +116,9 @@ button{
   bottom: 20px;
   width: 14px; 
   height: 14px;  
-  border: solid 2.5px var(--Light-grey);
+  border: solid 2.5px var(--White);
   border-radius: 0px 16px 0px 18px;
-  border-color:  var(--Light-grey) var(--Light-grey) transparent transparent;
+  border-color:  var(--White) var(--White) transparent transparent;
 }
 
 hr{
