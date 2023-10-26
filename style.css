@@ -37,7 +37,7 @@ body{
   justify-content: center;
 }
 
-.card{ 
+.card{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,10 +140,6 @@ button{
   border-color:  var(--White) var(--White) transparent transparent;
 }
 
-.info{
-  margin-left: -3rem;
-}
-
 .info ul{
   display: flex;
   flex-direction: column;
@@ -153,19 +149,20 @@ button{
 
 .result{
   display: flex;
+  align-items: center;
   color:var(--Off-black);
   font-weight: bold;
   font-style: italic;
   letter-spacing: -0.1rem;
   font-size: 3rem;
   margin-top: -20px;
+  
 }
 
 #result-y,
 #result-m,
 #result-d{
   color: var(--Purple);
-  margin-left: 1rem;
 }
 
 .attribution { 
