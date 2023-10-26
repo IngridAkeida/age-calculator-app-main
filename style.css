@@ -44,7 +44,7 @@ body{
   align-items: center;
   text-align: center;
   justify-content: center;
-  width: 18rem;
+  width: 20rem;
   height: 26rem;
   background-color: var(--White);
   padding: 1rem;
@@ -55,30 +55,35 @@ body{
 
 .dates-form{
   display: flex;
+  align-items: center;
+  justify-content:space-between;
+  text-align: left;
 }
 
 .form-fill{
   display: flex;
-  text-align: left;
   flex-direction: column;
-  margin: 0.5rem;
 }
 
 .form-fill label{
-  width: 5rem;
   color: var(--Smokey-grey);
-  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.6rem;
   font-weight: 700;
 }
 
 .form-fill input{
-  width: 5rem;
-  padding: 1rem;
+  width: 4.5rem;
+  padding: 0.5rem;
   border: solid 1px var(--Light-grey);
   border-radius: 0.5rem;
+  color: var(--Off-black);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .dates-send{
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,19 +108,20 @@ button{
   z-index: 2;
 }
 
+.line-middle, 
+.line-right, 
+.line-left{
+  position: absolute;
+}
+
 .line-middle{
   width: 2.5px;
   height: 18px;
   top: 20px;
   background-color: var(--White);
-  display: inline-block;
-  position: absolute;
-  
 }
 
-.line-right{
-  display: inline-block;
-  position: absolute;
+.line-right{ 
   right: 18px;
   bottom: 20px;
   width: 14px; 
@@ -123,12 +129,9 @@ button{
   border: solid 2.5px var(--White);
   border-radius: 16px 0px 18px 0px;
   border-color: var(--White) transparent transparent var(--White) ;
- 
 }
 
 .line-left{
-  display: inline-block;
-  position: absolute;
   left: 20px;
   bottom: 20px;
   width: 14px; 
@@ -146,7 +149,9 @@ button{
 
 .result{
   color:var(--Off-black);
-  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
 }
 
 .attribution { 
