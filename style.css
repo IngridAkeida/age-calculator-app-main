@@ -179,6 +179,22 @@ button:active{
   color: #3e52a3; 
 }
 
-@media (max-width: 600px){
+@media (min-width: 38rem){
+  
+
+  .dates{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  button{
+    background-color: var(--Purple);
+    position: relative;
+    border: none;
+    padding: 2rem;
+    border-radius: 3rem;
+    z-index: 2;
+  }
 	
 }
