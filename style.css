@@ -107,6 +107,10 @@ button{
   z-index: 2;
 }
 
+button:active{
+  background-color: var(--Off-black);
+}
+
 .line-middle, 
 .line-right, 
 .line-left{
@@ -156,7 +160,6 @@ button{
   letter-spacing: -0.1rem;
   font-size: 3rem;
   margin-top: -20px;
-  
 }
 
 #result-y,
