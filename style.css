@@ -45,7 +45,7 @@ body{
   text-align: center;
   justify-content: center;
   width: 18rem;
-  height: 24rem;
+  height: 26rem;
   background-color: var(--White);
   padding: 1rem;
   border-radius: 1rem 1rem 5rem 1rem;
@@ -78,12 +78,18 @@ body{
   border-radius: 0.5rem;
 }
 
-button
+button{
+  background-color: var(--Purple);
+  border: none;
+  padding: 2rem 1rem;
+  border-radius: 3rem;
+}
 
 
 
 .info ul{
   display: flex;
+  flex-direction: column;
   text-align: left;
 }
 
