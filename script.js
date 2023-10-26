@@ -14,9 +14,9 @@ function check(){
 
   // Result
 
-  let yearsRes = window.document.getElementById('res-years');
-  let monthsRes = window.document.getElementById('res-months');
-  let daysRes = window.document.getElementById('res-days');
+  let yearsRes = window.document.getElementById('result-y');
+  let monthsRes = window.document.getElementById('result-m');
+  let daysRes = window.document.getElementById('result-d');
   
   //errors
 
@@ -65,8 +65,9 @@ function check(){
       monthAge -= 1;
       dayAge = dayNow - dayBirth % 31;
     }
-    yearsRes.innerHTML = `${yearAge} years`;
-    monthsRes.innerHTML = `${monthAge} months`;
-    daysRes.innerHTML = `${dayAge} days`;
+
+    yearsRes.innerHTML = `${yearAge}`;
+    monthsRes.innerHTML = `${monthAge} `;
+    daysRes.innerHTML = `${dayAge} `;
   }
 }

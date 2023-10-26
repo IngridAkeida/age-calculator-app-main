@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
 }
 
 ul,li{
@@ -25,7 +24,7 @@ ul,li{
 }
 
 body{
-  font-family: ;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container{
@@ -153,12 +152,20 @@ button{
 }
 
 .result{
+  display: flex;
   color:var(--Off-black);
   font-weight: bold;
   font-style: italic;
   letter-spacing: -0.1rem;
   font-size: 3rem;
   margin-top: -20px;
+}
+
+#result-y,
+#result-m,
+#result-d{
+  color: var(--Purple);
+  margin-left: 1rem;
 }
 
 .attribution { 
