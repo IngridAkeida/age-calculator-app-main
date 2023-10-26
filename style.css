@@ -50,7 +50,7 @@ body{
   padding: 1rem;
   border-radius: 1rem 1rem 5rem 1rem;
   box-shadow: 0.5rem 0.5rem 1rem var(--GrayishBlue);
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .dates-form{
@@ -88,7 +88,7 @@ body{
 
 .line{
   width: auto;
-  border-top: 1px solid var(--Smokey-grey);
+  border-top: 2px solid var(--Off-white);
   margin-top: -2rem;
   width: 16rem;
   z-index: 1;
