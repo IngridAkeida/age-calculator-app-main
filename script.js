@@ -43,8 +43,16 @@ function check(){
     //must be a valid day
     //must be a valid month
     //must be a valid year
+    let erro = window.document.getElementById('erro');
     
-    window.alert('Please, check the data and try again!');
+    //style
+    erro.style.color = "#";
+    erro.style.width = "red";
+
+    erro.innerHTML += `Please, check the data and try again!`
+    
+    /*window.alert('Please, check the data and try again!');*/
+
   
   } else {
 
