@@ -45,8 +45,6 @@ function check(){
   errorMessageMonth.style.cssText = myStyles;
   errorMessageYear.style.cssText = myStyles;
 
-
-
   //logic
 
   // Is the field not filled in?
