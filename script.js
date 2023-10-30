@@ -21,6 +21,7 @@ function check(){
   //errors
 
   let haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
+
   let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
   let haveWrongYear = yearBirth > yearNow;
   let haveInvalidMonth = monthBirth > 12;
@@ -30,29 +31,46 @@ function check(){
   }
   console.log(getDaysInMonth(monthBirth, yearBirth));
 
+  const errorMessageDay = window.document.getElementById("errorMessageDay");
+  const errorMessageMonth = window.document.getElementById("errorMessageMonth");
+  const errorMessageYear = window.document.getElementById("errorMessageYear");
+
+  const myStyles = `
+  color: red;
+  font-size: 0.4rem;
+  padding-bottom: 10px;
+  `;
+
+  errorMessageDay.style.cssText = myStyles;
+  errorMessageMonth.style.cssText = myStyles;
+  errorMessageYear.style.cssText = myStyles;
+
+
+
   //logic
+
+  // Is the field not filled in?
+ if(haveNoValue){
+  
+  erro.innerHTML = `your field ar not filled`;
+
+ } else
+  // date really exist?
   if(dayBirth > getDaysInMonth(monthBirth, yearBirth)) {
 
     window.alert('teste error');
   
-  } else if(haveNoValue
+  } // date  
+  else if(haveNoValue
      || haveInvalidDate 
      || haveWrongYear 
-     || haveInvalidMonth) {
+     || haveInvalidMonth){
+
+      erro.innerHTML += `Must to be a valid date`;
   
     //must be a valid day
     //must be a valid month
     //must be a valid year
-    let erro = window.document.getElementById('erro');
-    
-    //style
-    erro.style.color = "#";
-    erro.style.width = "red";
-
-    erro.innerHTML += `Please, check the data and try again!`
-    
-    /*window.alert('Please, check the data and try again!');*/
-
   
   } else {
 
