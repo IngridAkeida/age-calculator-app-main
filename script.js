@@ -47,24 +47,26 @@ function check(){
 
   //logic
 
-  // Is the field not filled in?
- if(haveNoValue){
   
-  erro.innerHTML = `your field ar not filled`;
-
- } else
   // date really exist?
   if(dayBirth > getDaysInMonth(monthBirth, yearBirth)) {
 
     window.alert('teste error');
   
   } // date  
-  else if(haveNoValue
-     || haveInvalidDate 
-     || haveWrongYear 
-     || haveInvalidMonth){
+  else 
+  // Is the field not filled in?
+  // Is the date less than 0?
 
-      erro.innerHTML += `Must to be a valid date`;
+
+  if(
+    haveNoValue || 
+    haveInvalidDate || 
+    haveWrongYear || 
+    haveInvalidMonth
+    ){
+
+      errorMessageDay.innerHTML += `Must to be a valid date`;
   
     //must be a valid day
     //must be a valid month
