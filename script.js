@@ -20,9 +20,13 @@ function check(){
   
   //errors
 
-  let haveNoValue = (yearBirth || monthBirth || dayBirth) == "";
+  let haveNoValue = yearBirth == ""
+  || monthBirth == ""
+  || dayBirth == "";
 
-  let haveInvalidDate = (yearBirth || monthBirth || dayBirth) < 1 ;
+  let haveInvalidDate = yearBirth < 1 
+  || monthBirth < 1 
+  || dayBirth < 1 ;
 
   let haveWrongYear = yearBirth > yearNow;
 
@@ -46,11 +50,11 @@ function check(){
 
   const errorMessageYear = window.document.getElementById("errorMessageYear");
 
- /*(dayBirth > getDaysInMonth(monthBirth, yearBirth)) || */
+  let hasErrors = (dayBirth > getDaysInMonth(monthBirth, yearBirth)) ||haveNoValue || haveInvalidDate
+
   //logic  
   // date really exist?
-  if(haveNoValue || haveInvalidDate){
-    console.log({haveNoValue,haveInvalidDate});
+  if(hasErrors){
 
     fillDay.style.color = "#ff5757";
     fillMonth.style.color = "#ff5757";
@@ -93,8 +97,7 @@ function check(){
       fillMonth.style.color = "#716f6f";
       errorMessageMonth.style.visibility = "hidden";
     }
-  }
-
+  } 
 
     let yearAge = yearNow - yearBirth;
     
@@ -114,7 +117,14 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    yearsRes.innerHTML = `${yearAge}`;
-    monthsRes.innerHTML = `${monthAge}`;
-    daysRes.innerHTML = `${dayAge}`;
+    if (!hasErrors) {
+      yearsRes.innerHTML = `${yearAge}`;
+      monthsRes.innerHTML = `${monthAge}`;
+      daysRes.innerHTML = `${dayAge}`;
+      
+    } else {
+      yearsRes.innerHTML = "----";
+      monthsRes.innerHTML = "--";
+      daysRes.innerHTML = "--";
+    }
 }
