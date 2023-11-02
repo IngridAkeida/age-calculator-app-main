@@ -22,7 +22,7 @@ function check(){
 
   let haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
 
-  let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
+  let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0 ;
 
   let haveWrongYear = yearBirth > yearNow;
 
@@ -31,7 +31,6 @@ function check(){
   function getDaysInMonth(month,year){
     return new Date(year, month, 0).getDate();
   }
-  console.log(getDaysInMonth(monthBirth, yearBirth));
 
   const fillDay = window.document.getElementById("fill-day");
 
