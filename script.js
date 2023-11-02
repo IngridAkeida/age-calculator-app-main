@@ -56,11 +56,21 @@ function check(){
     errorMessageDay.style.display = "block";
     errorMessageMonth.style.display = "block";
     errorMessageYear.style.display = "block";
+
+    fillDay.style.color = "#ff5757";
+    fillMonth.style.color = "#ff5757";
+    fillYear.style.color = "#ff5757";
+
+    inputDay.style.color = "#ff5757";
   
   } else {
     errorMessageDay.style.display = "none";
     errorMessageMonth.style.display = "none";
     errorMessageYear.style.display = "none";
+
+    fillDay.style.color = "#716f6f";
+    fillMonth.style.color = "#716f6f";
+    fillYear.style.color = "#716f6f";
   };
 
 
