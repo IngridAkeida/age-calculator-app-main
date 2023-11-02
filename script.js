@@ -113,6 +113,6 @@ function check(){
     }
 
     yearsRes.innerHTML = `${yearAge}`;
-    monthsRes.innerHTML = `${monthAge} `;
-    daysRes.innerHTML = `${dayAge} `;
+    monthsRes.innerHTML = `${monthAge}`;
+    daysRes.innerHTML = `${dayAge}`;
 }
