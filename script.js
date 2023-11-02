@@ -33,19 +33,18 @@ function check(){
   }
   console.log(getDaysInMonth(monthBirth, yearBirth));
 
-  const errorMessageDay = window.document.getElementById("errorMessageDay");
-
   const fillDay = window.document.getElementById("fill-day");
-
-  
-  const errorMessageMonth = window.document.getElementById("errorMessageMonth");
 
   const fillMonth = window.document.getElementById("fill-month");
 
-  
-  const errorMessageYear = window.document.getElementById("errorMessageYear");
-
   const fillYear = window.document.getElementById("fill-year");
+
+
+  const errorMessageDay = window.document.getElementById("errorMessageDay");
+
+  const errorMessageMonth = window.document.getElementById("errorMessageMonth");
+
+  const errorMessageYear = window.document.getElementById("errorMessageYear");
 
   //logic  
   // date really exist?
@@ -53,26 +52,25 @@ function check(){
     dayBirth > getDaysInMonth(monthBirth, yearBirth) || haveNoValue ||
     haveInvalidDate) {
 
-    errorMessageDay.style.display = "block";
-    errorMessageMonth.style.display = "block";
-    errorMessageYear.style.display = "block";
-
     fillDay.style.color = "#ff5757";
     fillMonth.style.color = "#ff5757";
     fillYear.style.color = "#ff5757";
 
-    inputDay.style.color = "#ff5757";
+    errorMessageDay.style.display = "block";
+    errorMessageMonth.style.display = "block";
+    errorMessageYear.style.display = "block";
   
   } else {
-    errorMessageDay.style.display = "none";
-    errorMessageMonth.style.display = "none";
-    errorMessageYear.style.display = "none";
 
     fillDay.style.color = "#716f6f";
     fillMonth.style.color = "#716f6f";
     fillYear.style.color = "#716f6f";
-  };
 
+    errorMessageDay.style.display = "none";
+    errorMessageMonth.style.display = "none";
+    errorMessageYear.style.display = "none";
+
+  };
 
   if(haveWrongYear || 
     haveInvalidMonth
