@@ -124,7 +124,7 @@ function check(){
     fillYear.style.color = "#716f6f";
     errorMessageYear.style.visibility = "hidden";
     }
-  }
+  } else {
 
     let yearAge = yearNow - yearBirth;
 
@@ -144,7 +144,7 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    if (!hasErrors || !haveYearbiggerthanNow) {
+    if (!hasErrors || !haveYearBiggerthanNow) {
       yearsRes.innerHTML = `${yearAge}`;
       monthsRes.innerHTML = `${monthAge}`;
       daysRes.innerHTML = `${dayAge}`;
@@ -154,4 +154,5 @@ function check(){
       monthsRes.innerHTML = "--";
       daysRes.innerHTML = "--";
     }
+  }
 }
