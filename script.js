@@ -34,8 +34,18 @@ function check(){
   console.log(getDaysInMonth(monthBirth, yearBirth));
 
   const errorMessageDay = window.document.getElementById("errorMessageDay");
+
+  const fillDay = window.document.getElementById("fill-day");
+
+  
   const errorMessageMonth = window.document.getElementById("errorMessageMonth");
+
+  const fillMonth = window.document.getElementById("fill-month");
+
+  
   const errorMessageYear = window.document.getElementById("errorMessageYear");
+
+  const fillYear = window.document.getElementById("fill-year");
 
   //logic  
   // date really exist?
