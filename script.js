@@ -92,7 +92,7 @@ function check(){
   };
 
   if (!haveNoValue || !haveInvalidDate) {
-    if(haveWrongYear){
+    if(haveWrongYear || haveYearBiggerthanNow){
     
       fillYear.style.color = "#716f6f";
       errorMessageYear.style.visibility = "visible";
@@ -113,17 +113,7 @@ function check(){
       fillMonth.style.color = "#716f6f";
       errorMessageMonth.style.visibility = "hidden";
     }
-
-    if(haveYearBiggerthanNow){
     
-    fillYear.style.color = "#ff5757";
-    errorMessageYear.style.visibility = "visible";
-  
-    } else {
-
-    fillYear.style.color = "#716f6f";
-    errorMessageYear.style.visibility = "hidden";
-    }
   } else {
 
     let yearAge = yearNow - yearBirth;
