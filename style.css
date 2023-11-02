@@ -84,6 +84,12 @@ body{
   border: solid 1px var(--Purple);
 }
 
+#errorMessageDay,
+#errorMessageMonth,
+#errorMessageYear{
+  display: none;
+}
+
 .dates-send{
   margin-top: 1.5rem;
   display: flex;
