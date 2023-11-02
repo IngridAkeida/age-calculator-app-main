@@ -17,6 +17,18 @@ function check(){
   let yearsRes = window.document.getElementById('result-y');
   let monthsRes = window.document.getElementById('result-m');
   let daysRes = window.document.getElementById('result-d');
+
+  // check if is future
+/*
+  let isFutureYear = yearBirth > yearNow;
+  let isFutureMonth = monthBirth > monthNow;
+  let isFutureDay = dayBirth > dayNow;
+
+  console.log({
+    isFutureYear,
+    isFutureMonth,
+    isFutureDay
+  })*/
   
   //errors
 
@@ -31,6 +43,8 @@ function check(){
   let haveWrongYear = yearBirth > yearNow;
 
   let haveInvalidMonth = monthBirth > 12;
+
+  let haveYearBiggerthanNow = yearNow === yearBirth && monthBirth > monthNow;
   
   function getDaysInMonth(month,year){
     return new Date(year, month, 0).getDate();
@@ -50,7 +64,9 @@ function check(){
 
   const errorMessageYear = window.document.getElementById("errorMessageYear");
 
-  let hasErrors = (dayBirth > getDaysInMonth(monthBirth, yearBirth)) ||haveNoValue || haveInvalidDate
+  let hasErrors = (dayBirth > getDaysInMonth(monthBirth, yearBirth)) 
+  || haveNoValue 
+  || haveInvalidDate;
 
   //logic  
   // date really exist?
@@ -97,10 +113,21 @@ function check(){
       fillMonth.style.color = "#716f6f";
       errorMessageMonth.style.visibility = "hidden";
     }
-  } 
+
+    if(haveYearBiggerthanNow){
+    
+    fillYear.style.color = "#ff5757";
+    errorMessageYear.style.visibility = "visible";
+  
+    } else {
+
+    fillYear.style.color = "#716f6f";
+    errorMessageYear.style.visibility = "hidden";
+    }
+  }
 
     let yearAge = yearNow - yearBirth;
-    
+
     if(monthBirth < monthNow ){
       monthAge = monthNow - monthBirth;
 
@@ -117,7 +144,7 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    if (!hasErrors) {
+    if (!hasErrors || !haveYearbiggerthanNow) {
       yearsRes.innerHTML = `${yearAge}`;
       monthsRes.innerHTML = `${monthAge}`;
       daysRes.innerHTML = `${dayAge}`;
