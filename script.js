@@ -72,15 +72,27 @@ function check(){
 
   };
 
-  if(haveWrongYear || 
-    haveInvalidMonth
-    ){
+  if(haveWrongYear){
   
-    //must be a valid day
-    //must be a valid month
-    //must be a valid year
+    fillYear.style.color = "#716f6f";
+    errorMessageYear.style.display = "block";
   
   } else {
+
+    fillYear.style.color = "#716f6f";
+    errorMessageYear.style.display = "none";
+  }
+
+  if(haveInvalidMonth){
+
+    fillMonth.style.color = "#ff5757";
+    errorMessageMonth.style.display = "block";
+  
+  } else {
+
+    fillMonth.style.color = "#716f6f";
+    errorMessageMonth.style.display = "none";
+  }
 
     let yearAge = yearNow - yearBirth;
     
@@ -103,5 +115,4 @@ function check(){
     yearsRes.innerHTML = `${yearAge}`;
     monthsRes.innerHTML = `${monthAge} `;
     daysRes.innerHTML = `${dayAge} `;
-  }
 }
