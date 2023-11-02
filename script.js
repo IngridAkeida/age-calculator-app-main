@@ -55,10 +55,6 @@ function check(){
   };
 
 
-  // Is the field not filled in?
-  // Is the date less than 0?
-
-
   if(haveWrongYear || 
     haveInvalidMonth
     ){
