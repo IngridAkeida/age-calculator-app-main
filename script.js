@@ -47,8 +47,7 @@ function check(){
     errorMessageMonth.style.display = "block";
     errorMessageYear.style.display = "block";
   
-  } // date  
-  else {
+  } else {
     errorMessageDay.style.display = "none";
     errorMessageMonth.style.display = "none";
     errorMessageYear.style.display = "none";
