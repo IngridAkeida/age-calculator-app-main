@@ -23,7 +23,9 @@ function check(){
   let haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
 
   let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0;
+
   let haveWrongYear = yearBirth > yearNow;
+
   let haveInvalidMonth = monthBirth > 12;
   
   function getDaysInMonth(month,year){
@@ -37,24 +39,29 @@ function check(){
 
   //logic  
   // date really exist?
-  if(dayBirth > getDaysInMonth(monthBirth, yearBirth)) {
+  if(
+    dayBirth > getDaysInMonth(monthBirth, yearBirthe) || haveNoValue ||
+    haveInvalidDate) {
 
-    window.alert('teste error');
+    errorMessageDay.style.display = "block";
+    errorMessageMonth.style.display = "block";
+    errorMessageYear.style.display = "block";
   
   } // date  
-  else 
+  else {
+    errorMessageDay.style.display = "none";
+    errorMessageMonth.style.display = "none";
+    errorMessageYear.style.display = "none";
+  };
+
+
   // Is the field not filled in?
   // Is the date less than 0?
 
 
-  if(
-    haveNoValue || 
-    haveInvalidDate || 
-    haveWrongYear || 
+  if(haveWrongYear || 
     haveInvalidMonth
     ){
-
-      errorMessageDay.innerHTML += `Must to be a valid date`;
   
     //must be a valid day
     //must be a valid month
