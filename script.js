@@ -56,9 +56,9 @@ function check(){
     fillMonth.style.color = "#ff5757";
     fillYear.style.color = "#ff5757";
 
-    errorMessageDay.style.display = "block";
-    errorMessageMonth.style.display = "block";
-    errorMessageYear.style.display = "block";
+    errorMessageDay.style.visibility = "visible";
+    errorMessageMonth.style.visibility = "visible";
+    errorMessageYear.style.visibility = "visible";
   
   } else {
 
@@ -66,32 +66,32 @@ function check(){
     fillMonth.style.color = "#716f6f";
     fillYear.style.color = "#716f6f";
 
-    errorMessageDay.style.display = "none";
-    errorMessageMonth.style.display = "none";
-    errorMessageYear.style.display = "none";
+    errorMessageDay.style.visibility = "hidden";
+    errorMessageMonth.style.visibility = "hidden";
+    errorMessageYear.style.visibility = "hidden";
 
   };
 
   if(haveWrongYear){
   
     fillYear.style.color = "#716f6f";
-    errorMessageYear.style.display = "block";
+    errorMessageYear.style.visibility = "visible";
   
   } else {
 
     fillYear.style.color = "#716f6f";
-    errorMessageYear.style.display = "none";
+    errorMessageYear.style.visibility = "hidden";
   }
 
   if(haveInvalidMonth){
 
     fillMonth.style.color = "#ff5757";
-    errorMessageMonth.style.display = "block";
+    errorMessageMonth.style.visibility = "visible";
   
   } else {
 
     fillMonth.style.color = "#716f6f";
-    errorMessageMonth.style.display = "none";
+    errorMessageMonth.style.visibility = "hidden";
   }
 
     let yearAge = yearNow - yearBirth;
