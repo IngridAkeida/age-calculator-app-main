@@ -88,6 +88,9 @@ body{
 #errorMessageMonth,
 #errorMessageYear{
   display: none;
+  color: red;
+  font-size: 0.4rem;
+  padding-bottom: 10px;
 }
 
 .dates-send{

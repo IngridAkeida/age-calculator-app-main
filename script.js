@@ -35,19 +35,7 @@ function check(){
   const errorMessageMonth = window.document.getElementById("errorMessageMonth");
   const errorMessageYear = window.document.getElementById("errorMessageYear");
 
-  const myStyles = `
-  color: red;
-  font-size: 0.4rem;
-  padding-bottom: 10px;
-  `;
-
-  errorMessageDay.style.cssText = myStyles;
-  errorMessageMonth.style.cssText = myStyles;
-  errorMessageYear.style.cssText = myStyles;
-
-  //logic
-
-  
+  //logic  
   // date really exist?
   if(dayBirth > getDaysInMonth(monthBirth, yearBirth)) {
 
