@@ -40,7 +40,7 @@ function check(){
   //logic  
   // date really exist?
   if(
-    dayBirth > getDaysInMonth(monthBirth, yearBirthe) || haveNoValue ||
+    dayBirth > getDaysInMonth(monthBirth, yearBirth) || haveNoValue ||
     haveInvalidDate) {
 
     errorMessageDay.style.display = "block";
