@@ -40,7 +40,7 @@ function check(){
   || monthBirth < 1 
   || dayBirth < 1 ;
 
-  let haveWrongYear = yearBirth > yearNow;
+  let haveYearInTheFuture = yearBirth > yearNow;
 
   let haveInvalidMonth = monthBirth > 12;
 
@@ -92,7 +92,7 @@ function check(){
   };
 
   if (!haveNoValue || !haveInvalidDate) {
-    if(haveWrongYear || haveYearBiggerthanNow){
+    if(haveYearInTheFuture || haveYearBiggerthanNow){
     
       fillYear.style.color = "#716f6f";
       errorMessageYear.style.visibility = "visible";
@@ -113,7 +113,7 @@ function check(){
       fillMonth.style.color = "#716f6f";
       errorMessageMonth.style.visibility = "hidden";
     }
-    
+
   } else {
 
     let yearAge = yearNow - yearBirth;
