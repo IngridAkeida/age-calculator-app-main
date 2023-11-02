@@ -123,7 +123,7 @@ function check(){
       daysRes.innerHTML = `${dayAge}`;
       
     } else {
-      yearsRes.innerHTML = "----";
+      yearsRes.innerHTML = "--";
       monthsRes.innerHTML = "--";
       daysRes.innerHTML = "--";
     }
