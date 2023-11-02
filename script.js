@@ -20,9 +20,9 @@ function check(){
   
   //errors
 
-  let haveNoValue = (yearBirth || monthBirth || dayBirth).length == 0;
+  let haveNoValue = (yearBirth || monthBirth || dayBirth) == "";
 
-  let haveInvalidDate = (yearBirth || monthBirth || dayBirth) <= 0 ;
+  let haveInvalidDate = (yearBirth || monthBirth || dayBirth) < 1 ;
 
   let haveWrongYear = yearBirth > yearNow;
 
@@ -31,12 +31,13 @@ function check(){
   function getDaysInMonth(month,year){
     return new Date(year, month, 0).getDate();
   }
+  console.log(getDaysInMonth(monthBirth,yearBirth))
 
-  const fillDay = window.document.getElementById("fill-day");
+  const fillDay = window.document.getElementById('fill-day');
 
-  const fillMonth = window.document.getElementById("fill-month");
+  const fillMonth = window.document.getElementById('fill-month');
 
-  const fillYear = window.document.getElementById("fill-year");
+  const fillYear = window.document.getElementById('fill-year');
 
 
   const errorMessageDay = window.document.getElementById("errorMessageDay");
@@ -45,11 +46,11 @@ function check(){
 
   const errorMessageYear = window.document.getElementById("errorMessageYear");
 
+ /*(dayBirth > getDaysInMonth(monthBirth, yearBirth)) || */
   //logic  
   // date really exist?
-  if(
-    dayBirth > getDaysInMonth(monthBirth, yearBirth) || haveNoValue ||
-    haveInvalidDate) {
+  if(haveNoValue || haveInvalidDate){
+    console.log({haveNoValue,haveInvalidDate});
 
     fillDay.style.color = "#ff5757";
     fillMonth.style.color = "#ff5757";
@@ -60,7 +61,6 @@ function check(){
     errorMessageYear.style.visibility = "visible";
   
   } else {
-
     fillDay.style.color = "#716f6f";
     fillMonth.style.color = "#716f6f";
     fillYear.style.color = "#716f6f";
@@ -71,27 +71,30 @@ function check(){
 
   };
 
-  if(haveWrongYear){
+  if (!haveNoValue || !haveInvalidDate) {
+    if(haveWrongYear){
+    
+      fillYear.style.color = "#716f6f";
+      errorMessageYear.style.visibility = "visible";
+    
+    } else {
   
-    fillYear.style.color = "#716f6f";
-    errorMessageYear.style.visibility = "visible";
+      fillYear.style.color = "#716f6f";
+      errorMessageYear.style.visibility = "hidden";
+    }
   
-  } else {
-
-    fillYear.style.color = "#716f6f";
-    errorMessageYear.style.visibility = "hidden";
+    if(haveInvalidMonth){
+  
+      fillMonth.style.color = "#ff5757";
+      errorMessageMonth.style.visibility = "visible";
+    
+    } else {
+  
+      fillMonth.style.color = "#716f6f";
+      errorMessageMonth.style.visibility = "hidden";
+    }
   }
 
-  if(haveInvalidMonth){
-
-    fillMonth.style.color = "#ff5757";
-    errorMessageMonth.style.visibility = "visible";
-  
-  } else {
-
-    fillMonth.style.color = "#716f6f";
-    errorMessageMonth.style.visibility = "hidden";
-  }
 
     let yearAge = yearNow - yearBirth;
     

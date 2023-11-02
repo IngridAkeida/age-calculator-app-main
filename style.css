@@ -86,7 +86,7 @@ body{
 
 #errorMessageDay,
 #errorMessageMonth,
-#errorMessageYear{
+#errorMessageYear {
   visibility: hidden;
   color: var(--Light-red);
   font-size: 0.4rem;
