@@ -28,8 +28,6 @@ function check(){
   let monthsRes = window.document.getElementById('result-m');
   let daysRes = window.document.getElementById('result-d');
 
-  
-
   // check if is future
 /*
   let isFutureYear = yearBirth > yearNow;
@@ -137,9 +135,15 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    yearsRes.innerHTML = `${yearAge}`;
-    monthsRes.innerHTML = `${monthAge}`;
-    daysRes.innerHTML = `${dayAge}`;
+    if(yearAge < 0 || monthAge < 0 || dayAge < 0){
+      yearsRes.innerHTML = "--";
+      monthsRes.innerHTML = "--";
+      daysRes.innerHTML = "--";
+    } else {
+      yearsRes.innerHTML = `${yearAge}`;
+      monthsRes.innerHTML = `${monthAge}`;
+      daysRes.innerHTML = `${dayAge}`;
+    }
     
   } else {
     yearsRes.innerHTML = "--";
