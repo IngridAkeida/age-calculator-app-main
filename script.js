@@ -12,11 +12,23 @@ function check(){
   let monthBirth = Number(window.document.getElementById('month').value);
   let dayBirth = Number(window.document.getElementById('day').value);
 
+  //show errors
+
+  let fillDay = window.document.getElementById('fill-day');
+  let fillMonth = window.document.getElementById('fill-month');
+  let fillYear = window.document.getElementById('fill-year');
+
+  let errorMessageDay = window.document.getElementById("errorMessageDay");
+  let errorMessageMonth = window.document.getElementById("errorMessageMonth");
+  let errorMessageYear = window.document.getElementById("errorMessageYear");
+
   // Result
 
   let yearsRes = window.document.getElementById('result-y');
   let monthsRes = window.document.getElementById('result-m');
   let daysRes = window.document.getElementById('result-d');
+
+  
 
   // check if is future
 /*
@@ -51,18 +63,7 @@ function check(){
   }
   console.log(getDaysInMonth(monthBirth,yearBirth))
 
-  const fillDay = window.document.getElementById('fill-day');
-
-  const fillMonth = window.document.getElementById('fill-month');
-
-  const fillYear = window.document.getElementById('fill-year');
-
-
-  const errorMessageDay = window.document.getElementById("errorMessageDay");
-
-  const errorMessageMonth = window.document.getElementById("errorMessageMonth");
-
-  const errorMessageYear = window.document.getElementById("errorMessageYear");
+  
 
   let hasErrors = (dayBirth > getDaysInMonth(monthBirth, yearBirth)) 
   || haveNoValue 
@@ -114,8 +115,10 @@ function check(){
       errorMessageMonth.style.visibility = "hidden";
     }
 
-  } else {
+  }
+  
 
+  if (!hasErrors || !haveYearBiggerthanNow || !haveYearInTheFuture || !haveInvalidMonth) {
     let yearAge = yearNow - yearBirth;
 
     if(monthBirth < monthNow ){
@@ -134,15 +137,14 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    if (!hasErrors || !haveYearBiggerthanNow) {
-      yearsRes.innerHTML = `${yearAge}`;
-      monthsRes.innerHTML = `${monthAge}`;
-      daysRes.innerHTML = `${dayAge}`;
-      
-    } else {
-      yearsRes.innerHTML = "--";
-      monthsRes.innerHTML = "--";
-      daysRes.innerHTML = "--";
-    }
+    yearsRes.innerHTML = `${yearAge}`;
+    monthsRes.innerHTML = `${monthAge}`;
+    daysRes.innerHTML = `${dayAge}`;
+    
+  } else {
+    yearsRes.innerHTML = "--";
+    monthsRes.innerHTML = "--";
+    daysRes.innerHTML = "--";
   }
+  
 }
