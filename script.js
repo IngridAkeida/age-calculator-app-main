@@ -27,18 +27,6 @@ function check(){
   let yearsRes = window.document.getElementById('result-y');
   let monthsRes = window.document.getElementById('result-m');
   let daysRes = window.document.getElementById('result-d');
-
-  // check if is future
-/*
-  let isFutureYear = yearBirth > yearNow;
-  let isFutureMonth = monthBirth > monthNow;
-  let isFutureDay = dayBirth > dayNow;
-
-  console.log({
-    isFutureYear,
-    isFutureMonth,
-    isFutureDay
-  })*/
   
   //errors
 
@@ -59,16 +47,12 @@ function check(){
   function getDaysInMonth(month,year){
     return new Date(year, month, 0).getDate();
   }
-  console.log(getDaysInMonth(monthBirth,yearBirth))
-
-  
 
   let hasErrors = (dayBirth > getDaysInMonth(monthBirth, yearBirth)) 
   || haveNoValue 
   || haveInvalidDate;
 
   //logic  
-  // date really exist?
   if(hasErrors){
 
     fillDay.style.color = "#ff5757";
@@ -135,7 +119,7 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    if(yearAge < 0 || monthAge < 0 || dayAge < 0 || haveNoValue){
+    if(yearAge < 0 || monthAge < 0 || dayAge < 0 || hasErrors){
       yearsRes.innerHTML = "--";
       monthsRes.innerHTML = "--";
       daysRes.innerHTML = "--";
