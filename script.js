@@ -42,7 +42,8 @@ function check(){
 
   let haveInvalidMonth = monthBirth > 12;
 
-  let haveYearBiggerthanNow = yearNow === yearBirth && monthBirth > monthNow;
+  let haveYearBiggerthanNow = yearNow === yearBirth 
+  && monthBirth > monthNow;
   
   function getDaysInMonth(month,year){
     return new Date(year, month, 0).getDate();
