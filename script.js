@@ -135,7 +135,7 @@ function check(){
       dayAge = dayNow - dayBirth % 31;
     }
 
-    if(yearAge < 0 || monthAge < 0 || dayAge < 0){
+    if(yearAge < 0 || monthAge < 0 || dayAge < 0 || haveNoValue){
       yearsRes.innerHTML = "--";
       monthsRes.innerHTML = "--";
       daysRes.innerHTML = "--";
