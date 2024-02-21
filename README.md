@@ -1,16 +1,7 @@
 # Frontend Mentor - Age calculator app
 
-![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
-
-## Welcome! 👋
-
-Thanks for checking this front-end coding challenge. You can see the app working here -> [Frontend Mentor - Age calculator app](https://agecalculator-2023.netlify.app/), please enjoy 🎉!
-
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
-
-**To do this challenge, I needed a decent understanding of HTML, CSS, and JavaScript.**
-
-## The challenge
+Thanks for checking this front-end coding challenge. You can see the app working here -> 
+[Frontend Mentor - Age calculator app](https://agecalculator-2023.netlify.app/), please enjoy 🎉!
 
 The challenge is to build out this age calculator app and get it looking as close to the design as possible.
 
@@ -25,4 +16,24 @@ Brief of the task:
   - The date is invalid e.g. 31/04/1991 (there are 30 days in April)
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Links](#links)
+- [Author](#author)
+
+## Overview
+  ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
+### Links
+
+- Solution URL: [https://github.com/IngridAkeida/age-calculator-app-main](https://github.com/IngridAkeida/age-calculator-app-main)
+- Live Site URL: [https://agecalculator-2023.netlify.app/](https://agecalculator-2023.netlify.app/)
+
+## Author
+
+- GitHub - [Ingrid Sanches](https://github.com/ingridAkeida)
+
+
+
 
