@@ -1,7 +1,8 @@
 # Frontend Mentor - Age calculator app
 
-Thanks for checking this front-end coding challenge. You can see the app working here -> 
-[Frontend Mentor - Age calculator app](https://agecalculator-2023.netlify.app/), please enjoy 🎉!
+Thanks for checking this front-end coding challenge. You can see the app working here:
+[Frontend Mentor - Age calculator app](https://agecalculator-2023.netlify.app/), 
+please enjoy 🎉!
 
 The challenge is to build out this age calculator app and get it looking as close to the design as possible.
 
